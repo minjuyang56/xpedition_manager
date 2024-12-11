@@ -17,7 +17,7 @@ To install the dependencies, run the following command:
 
 ```bash
 pip install pywin32
-
+```
 
 ### Importing the XpeditionManager
 To use the `XpeditionManager`, simply import it and initialize the environment as needed.
@@ -36,3 +36,4 @@ manager.initialize_pcb()
 
 # If you want to set up both the Xpedition both Designer and PCB layout environments:
 manager.initialize_both()
+```
