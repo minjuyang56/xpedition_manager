@@ -1,0 +1,9 @@
+README.md
+setup.py
+xpedition_manager/__init__.py
+xpedition_manager/manager.py
+xpedition_manager.egg-info/PKG-INFO
+xpedition_manager.egg-info/SOURCES.txt
+xpedition_manager.egg-info/dependency_links.txt
+xpedition_manager.egg-info/requires.txt
+xpedition_manager.egg-info/top_level.txt
