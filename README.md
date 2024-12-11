@@ -20,6 +20,7 @@ pip install pywin32
 ```
 
 ### Importing the XpeditionManager
+
 To use the `XpeditionManager`, simply import it and initialize the environment as needed.
 
 ```python
