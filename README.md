@@ -19,9 +19,9 @@ To install the dependencies, run the following command:
 pip install pywin32
 ```
 
-and then, install xpedition_manager!
+and then, install xpedition-manager!
 ```bash
-pip install xpedition_manager
+pip install xpedition-manager
 ```
 
 ### Importing the XpeditionManager
