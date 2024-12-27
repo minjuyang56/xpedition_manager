@@ -16,6 +16,10 @@ Before using `xpedition_manager`, you'll need to install the required dependenci
 To install the dependencies, run the following command:
 
 ```bash
+pip install wheel
+```
+
+```bash
 pip install pywin32
 ```
 
