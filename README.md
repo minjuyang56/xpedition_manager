@@ -23,7 +23,7 @@ pip install wheel
 pip install pywin32
 ```
 
-and then, install xpedition-manager!
+and then, install xpedition-manager
 ```bash
 pip install xpedition-manager
 ```
