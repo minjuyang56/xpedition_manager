@@ -26,13 +26,13 @@ from xpedition_manager import XpeditionManager
 # Create an instance of the XpeditionManager
 manager = XpeditionManager()
 
-# If you want to set up the Xpedition Designer environment (with ConstraintAuto):
+# If you want to set up the Xpedition Designer environment:
 manager.initialize_design()
 
-# If you want to set up the Xpedition PCB layout environment (with ConstraintAuto):
+# If you want to set up the Xpedition PCB layout environment:
 manager.initialize_pcb()
 
-# If you want to set up both the Xpedition both Designer and PCB layout environments (with ConstraintAuto):
+# If you want to set up both the Xpedition both Designer and PCB layout environments:
 manager.initialize_both()
 ```
 
