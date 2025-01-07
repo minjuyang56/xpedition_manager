@@ -36,7 +36,7 @@ manager.initialize_pcb()
 manager.initialize_design_and_pcb()
 ```
 
-Or you can inherit xpedition-manager.
+### inherit xpedition-manager
 Below is an example of a calculator that return selected nets.
 
 ```python
