@@ -75,6 +75,7 @@ if __name__ == "__main__":
 ```
 
 ### 3. Example for Designer
+The following example demonstrates how to use XpeditionManager to list components with a reference designator starting with "R" in the Xpedition Designer environment:
 ```python
 from xpedition_manager import XpeditionManager
 
