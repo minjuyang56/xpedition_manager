@@ -11,12 +11,12 @@ Before using `xpedition_manager`, ensure you have the following installed and co
 
 ## Installing Guide
 
-install xpedition-manager
+install xpedition-manager using pip
 ```bash
 pip install xpedition-manager
 ```
 ## Examples
-### Importing the XpeditionManager
+### 1. Import and reference the XpeditionManager
 To use the `XpeditionManager`, simply import it and initialize the environment as needed.
 ```python
 from xpedition_manager import XpeditionManager
@@ -34,12 +34,12 @@ manager.initialize_pcb()
 manager.initialize_design_and_pcb()
 ```
 
-### inherit xpedition-manager
-Below is an example of a calculator that return selected nets.
+### 2. Inherit xpedition-manager
+The following example demonstrates how to extend the XpeditionManager class to add custom functionality:
 ```python
 from xpedition_manager import XpeditionManager
 
-class NetLengthCalculator(XpeditionManager):
+class ExtendXpeditionManager(XpeditionManager):
     def __init__(self):
         XpeditionManager.__init__(self) 
         self.initialize_pcb() # When this line is executed, self.pcb_app and self.pcb_doc are determined.
@@ -60,10 +60,14 @@ class NetLengthCalculator(XpeditionManager):
             return "um"
 
 def main():
-    calculator = NetLengthCalculator()
-    for net in calculator.get_selected_nets():
+    extended_xpedition_manager = ExtendXpeditionManager()
+
+    # Display selected nets
+    for net in extended_xpedition_manager.get_selected_nets():
         print('selected net:', net.Name)
-    print('unit:', calculator.get_current_unit())
+
+    # Display the current unit
+    print('unit:', extended_xpedition_manager.get_current_unit())
 
 if __name__ == "__main__":
     main()
