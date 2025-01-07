@@ -34,7 +34,7 @@ manager.initialize_pcb()
 manager.initialize_design_and_pcb()
 ```
 
-### 2. Inherit xpedition-manager
+### 2. Inherit xpedition-manager (for PCB)
 The following example demonstrates how to extend the XpeditionManager class to add custom functionality:
 ```python
 from xpedition_manager import XpeditionManager
@@ -72,6 +72,32 @@ def main():
 if __name__ == "__main__":
     main()
 
+```
+
+### 3. Example for Designer
+```python
+from xpedition_manager import XpeditionManager
+
+manager = XpeditionManager()
+manager.initialize_design()
+
+vdapp = manager.design_app
+SchematicSheetDocs = vdapp.SchematicSheetDocuments() 
+vdview = vdapp.ActiveView 
+
+def findComponentFromCurrentView(alpha):
+    components = vdview.Query(128, 0)
+    
+    for comp in components:
+        compResDef = comp.RefDes
+        compName = comp.GetName(1)
+        print(compName, compResDef)
+
+def main():
+    findComponentFromCurrentView('R')
+    
+if __name__=="__main__":
+    main()
 ```
 
 
