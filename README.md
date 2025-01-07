@@ -39,7 +39,7 @@ The following example demonstrates how to extend the XpeditionManager class to a
 ```python
 from xpedition_manager import XpeditionManager
 
-class ExtendXpeditionManager(XpeditionManager):
+class ExtendedXpeditionManager(XpeditionManager):
     def __init__(self):
         XpeditionManager.__init__(self) 
         self.initialize_pcb() # When this line is executed, self.pcb_app and self.pcb_doc are determined.
@@ -60,7 +60,7 @@ class ExtendXpeditionManager(XpeditionManager):
             return "um"
 
 def main():
-    extended_xpedition_manager = ExtendXpeditionManager()
+    extended_xpedition_manager = ExtendedXpeditionManager()
 
     # Display selected nets
     for net in extended_xpedition_manager.get_selected_nets():
