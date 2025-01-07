@@ -18,8 +18,9 @@ pip install xpedition-manager
 
 ### Importing the XpeditionManager
 
-To use the `XpeditionManager`, simply import it and initialize the environment as needed.
 
+
+To use the `XpeditionManager`, simply import it and initialize the environment as needed.
 ```python
 from xpedition_manager import XpeditionManager
 
@@ -37,6 +38,8 @@ manager.initialize_design_and_pcb()
 ```
 
 ### inherit xpedition-manager
+
+
 Below is an example of a calculator that return selected nets.
 
 ```python
