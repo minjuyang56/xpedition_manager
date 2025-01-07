@@ -9,21 +9,9 @@ Before using `xpedition_manager`, ensure you have the following installed and co
 - **Xpedition Application**: Xpedition PCB and/or Designer application must be installed on your machine.
 - **License**: A valid license for Xpedition is required to run this package.
 
-## Installing Dependencies
+## Installing Guide
 
-Before using `xpedition_manager`, you'll need to install the required dependencies, including `pywin32`, which provides the `win32com.client` module.
-
-To install the dependencies, run the following command:
-
-```bash
-pip install wheel
-```
-
-```bash
-pip install pywin32
-```
-
-and then, install xpedition-manager
+install xpedition-manager
 ```bash
 pip install xpedition-manager
 ```
@@ -38,12 +26,52 @@ from xpedition_manager import XpeditionManager
 # Create an instance of the XpeditionManager
 manager = XpeditionManager()
 
-# If you want to set up the Xpedition Designer environment:
+# If you want to set up the Xpedition Designer environment (with ConstraintAuto):
 manager.initialize_design()
 
-# If you want to set up the Xpedition PCB layout environment:
+# If you want to set up the Xpedition PCB layout environment (with ConstraintAuto):
 manager.initialize_pcb()
 
-# If you want to set up both the Xpedition both Designer and PCB layout environments:
+# If you want to set up both the Xpedition both Designer and PCB layout environments (with ConstraintAuto):
 manager.initialize_both()
 ```
+
+Or you can inherit xpedition-manager.
+Below is an example of a calculator that return selected nets.
+
+```python
+from xpedition_manager import XpeditionManager
+
+class NetLengthCalculator(XpeditionManager):
+    def __init__(self):
+        XpeditionManager.__init__(self) 
+        self.initialize_pcb() # When this line is executed, self.pcb_app and self.pcb_doc are determined.
+
+    def get_selected_nets(self):
+        selected_nets_com = self.pcb_doc.GetNets(1)
+        return selected_nets_com
+
+    def get_current_unit(self):
+        current_unit = self.pcb_doc.CurrentUnit
+        if current_unit == 2:
+            return "mils"
+        elif current_unit == 3:
+            return "inch"
+        elif current_unit == 4:
+            return "mm"
+        elif current_unit == 5:
+            return "um"
+
+def main():
+    calculator = NetLengthCalculator()
+    for net in calculator.get_selected_nets():
+        print('selected net:', net.Name)
+    print('unit:', calculator.get_current_unit())
+
+if __name__ == "__main__":
+    main()
+
+```
+
+
+
