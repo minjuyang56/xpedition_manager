@@ -33,7 +33,7 @@ manager.initialize_design()
 manager.initialize_pcb()
 
 # If you want to set up both the Xpedition both Designer and PCB layout environments:
-manager.initialize_both()
+manager.initialize_design_and_pcb()
 ```
 
 Or you can inherit xpedition-manager.
