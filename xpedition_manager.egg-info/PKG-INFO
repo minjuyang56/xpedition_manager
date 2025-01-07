@@ -1,8 +1,12 @@
 Metadata-Version: 2.1
 Name: xpedition_manager
-Version: 0.1
+Version: 0.2
 Summary: A Python package to interact with Xpedition tools
 Home-page: https://github.com/minjuyang56/xpedition_manager
-Author: minju yang
+Author: Minju Yang
 Author-email: minju.yang@siemens.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Requires-Dist: wheel
 Requires-Dist: pywin32
