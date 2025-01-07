@@ -1,6 +1,6 @@
 # Xpedition Manager
 
-`xpedition_manager` is a Python package that sets up the Xpedition Designer and PCB layout environment. This package helps automate your Xpedition environment and integrates with related applications.
+`xpedition_manager` is a Python package that sets up the Xpedition Designer and PCB layout environment more easily and quickly. This package helps automate your Xpedition environment and integrates with related applications.
 
 ## Prerequisites
 
