@@ -15,7 +15,7 @@ Before using `xpedition_manager`, ensure you have the following installed and co
 
 install xpedition-manager using pip
 ```bash
-pip install xpedition-manager
+pip install xpedition-manager==0.2
 ```
 ## Examples
 ### 1. Import and reference the XpeditionManager
